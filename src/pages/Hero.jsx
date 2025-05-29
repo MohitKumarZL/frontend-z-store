@@ -11,7 +11,7 @@ import FooterBanner from "./FooterBanner";
 const Hero = () => {
   return (
     <div className="w-full h-full sm:overflow-hidden ">
-      <img src={hero}  className="w-full "/>
+      <img src={hero}  className="w-full sm:-mt-25"/>
       <BestSellers />
 
       <Collection />

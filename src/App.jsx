@@ -25,8 +25,8 @@ function App() {
         <Route path="/shopAll" element={<ShopAll />} />
         <Route path="/collectiondropdown" element={<CollectionDropdown />} />
         <Route path="/plusSize" element={<PlusSize />} />
+        
       </Routes>
-      
     </Router>
   );
 }

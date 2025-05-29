@@ -10,6 +10,7 @@ import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   return (
     <div className="w-full relative">
@@ -84,9 +85,15 @@ const Navbar = () => {
                 </button>
               </li>
               <li>
-                <Link to="/login" className="block px-[0.5vw] py-[1.111vw]">
-                  <FaRegUser className="min-w-[1.667vw] h-auto" />
-                </Link>
+                <button
+                onCanPlay={()=> setIsLoggedIn(!isLoggedIn)}>
+                {isLoggedIn ? (
+                  <AiOutlineClose className="min-w-[1.667vw] h-auto" />
+                ) : (
+                  <Link to="/login" className="block px-[0.5vw] py-[1.111vw]">
+                    <FaRegUser className="min-w-[1.667vw] h-auto" />
+                  </Link>)}
+                  </button>
               </li>
               <li>
                 <Link to="/wishlist" className="block px-[0.5vw] py-[1.111vw]">
@@ -150,8 +157,8 @@ const Navbar = () => {
         </div>
       </nav>
 
-      
-    
+
+
     </div>
   );
 };
