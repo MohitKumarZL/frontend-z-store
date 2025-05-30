@@ -12,7 +12,7 @@ import SustainbilityDropdown from "./Dropdowns/SustainbilityDropdown";
 import SearchBar from "./Dropdowns/SearchBar";
 import { AiOutlineClose } from "react-icons/ai";
 import Menu from "./Menu";
-import Login from "./Login";
+import Signin from "./Signin";
 import Wishlist from "./Wishlist";
 import Cart from "./Cart";
 
@@ -108,7 +108,7 @@ const navigate = useNavigate();
                 </button>
               </li>
               <li>  
-                <button onClick={() => handleClick("/login")}>
+                <button onClick={() => handleClick("/signin")}>
                   <FaRegUser className="min-w-[1.667vw] h-auto" />
                 </button>
               </li>

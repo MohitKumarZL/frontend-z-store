@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar"; 
 import Hero from "./pages/Hero";
+import Signin from "./Components/Signin";
 import Login from "./Components/Login";
 import Wishlist from "./Components/Wishlist";
 import Cart from "./Components/Cart";
@@ -16,9 +17,10 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
+      <Routes>  
         <Route path="/" element={<Hero />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/login" element={<Login/>}/>
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/menu" element={<Menu />} />

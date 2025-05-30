@@ -119,7 +119,7 @@ const toggleDropdown = (section) => {
                 </div>
 
                 <div className=' w-full flex justify-between ' >
-                <button className='border w-[48%] flex justify-center items-center gap-4 p-[4vw] text-[14px]'><FaRegUser className='w-[24px] h-auto'/><span >Log In</span></button><button className='border w-[48%] p-[4vw] text-[14px]' onClick={()=>handleClick("login")}>Create Account</button>
+                <button className='border w-[48%] flex justify-center items-center gap-4 p-[4vw] text-[14px]'><FaRegUser className='w-[24px] h-auto'/><span >Log In</span></button><button className='border w-[48%] p-[4vw] text-[14px]' onClick={()=>handleClick("signin")}>Create Account</button>
             </div>
             </div>
             

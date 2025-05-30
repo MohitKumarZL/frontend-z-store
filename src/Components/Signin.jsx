@@ -8,7 +8,7 @@ import apple from "../assets/apple.svg";
 import google from "../assets/Google.svg";
 import facebook from "../assets/Facebook.svg";
 
-const Login = () => {
+const Signin = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -25,7 +25,13 @@ const Login = () => {
           <div className="w-full">
             <ul className="flex flex-col justify-center items-center gap-2 ">
               <li className="flex justify-center text-3xl font-semibold mb-5">
-                Log In
+                Create Account
+              </li>
+              <li className="border border-[#606060] px-4 py-3 w-full">
+                <input type="text" placeholder="First Name" className="focus:outline-none focus:ring-0"></input>
+              </li>
+              <li className="border border-[#606060] px-4 py-3 w-full">
+                <input type="text" placeholder="Last Name" className="focus:outline-none focus:ring-0"></input>
               </li>
               <li className="border border-[#606060] px-4 py-3 w-full">
                 <input type="email" placeholder="Email" className="focus:outline-none focus:ring-0"></input>
@@ -44,13 +50,14 @@ const Login = () => {
                   {passwordVisible ? <FaRegEye /> : <FaRegEyeSlash />}
                 </button>
               </li>
-              <li className="">
-                <Link to="/signin" className="p-4 text-[#748C70] flex items-start">
-                Forgot Your Password?
-                </Link>{" "}
-              </li>
               <li className="border border-[#606060]  bg-[#5A6D57] text-white text-sm p-[16px] w-full mt-2 flex justify-center">
-                <button>Log In</button>
+                <button>Register Now</button>
+              </li>
+              <li>
+                <span className="text-sm">Already Have An Account?</span>{" "}
+                <Link to="/login" className="p-4 text-[#748C70]">
+                  Log In
+                </Link>{" "}
               </li>
               <li className="text-xs ">Or</li>
               <li className="flex justify-center gap-4 my-3">
@@ -65,13 +72,25 @@ const Login = () => {
                   <img src={facebook} />
                 </button>
               </li>
-              <li>
-                <span className="text-sm">New to Z-Store?</span>{" "}
-                <Link to="/signin" className="p-4 text-[#748C70]">
-                  Create An Account
-                </Link>{" "}
+              <li className="text-xs text-center mt-2">
+                <p className="leading-5">
+                  By Clicking Register Now you Agree To&nbsp;
+                  <a
+                    href="https://www.youtube.com/"
+                    className="text-[#748C70] underline underline-offset-1"
+                  >
+                    Terms & Conditions
+                  </a>
+                  &nbsp;And&nbsp;
+                  <a
+                    href="https://www.youtube.com/"
+                    className="text-[#748C70] underline underline-offset-1"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </p>
               </li>
-
             </ul>
           </div>
           <div></div>
@@ -82,4 +101,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signin;

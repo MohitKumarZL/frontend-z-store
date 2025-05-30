@@ -133,7 +133,7 @@ const Cart = () => {
           <Link to="/" className='text-sm text-[#748C70] hover:underline'>Back</Link>
           <span className='text-3xl font-semibold text-black'>Your Cart</span>
         
-        <Link to="/shop" className='hidden sm:block text-sm text-[#748C70] hover:underline'>Continue Shopping</Link>
+        <Link to="/shopAll" className='hidden sm:block text-sm text-[#748C70] hover:underline'>Continue Shopping</Link>
       </div>
 
       {/* Cart Header */}
@@ -147,9 +147,12 @@ const Cart = () => {
       </div>
 
       {/* Cart Items */}
+      <div>
       {orders.map((item) => (
-        <div className='flex py-3 border-b border-gray-200' key={item.id}>
-          <div className='w-1/2 flex gap-5'>
+        <div className='flex py-3 ' key={item.id}>
+          
+            <div className='w-1/2 '>
+            <div className='w-full flex gap-5' >
             <img src={item.image} alt={item.title} width={120} height={170} className='object-cover' />
             <div className='flex-1 space-y-3'>
               <div className='flex justify-between items-start'>
@@ -162,7 +165,8 @@ const Cart = () => {
               <div className='text-sm text-gray-600'>Color {item.color}</div>
             </div>
           </div>
-          <div className='w-1/2 flex justify-around items-center'>
+            </div>
+          <div className='w-1/2 flex justify-around items-start'>
             <div>${item.price.toFixed(2)}</div>
             <div className='flex items-center gap-2'>
               <button 
@@ -185,8 +189,8 @@ const Cart = () => {
       ))}
 
       {/* Order Summary */}
-      <div className='mt-7 w-1/2 ml-auto'>
-        <div className='space-y-3 text-sm'>
+      <div className='mt-7 w-full sm:w-1/2 ml-auto'>
+        <div className='space-y-3  text-sm'>
           <div className='flex justify-between'>
             <span>Subtotal ({orders.length})</span>
             <span>${subtotal.toFixed(2)}</span>
@@ -210,6 +214,7 @@ const Cart = () => {
         <p className='text-xs text-gray-500 mt-3 text-center'>
           The total amount you pay may include applicable customs duties & taxes. We guarantee no additional charges on delivery.
         </p>
+      </div>
       </div>
     </div>
   );

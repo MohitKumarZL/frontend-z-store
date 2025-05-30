@@ -90,7 +90,7 @@ const Navbar = () => {
                 {isLoggedIn ? (
                   <AiOutlineClose className="min-w-[1.667vw] h-auto" />
                 ) : (
-                  <Link to="/login" className="block px-[0.5vw] py-[1.111vw]">
+                  <Link to="/signin" className="block px-[0.5vw] py-[1.111vw]">
                     <FaRegUser className="min-w-[1.667vw] h-auto" />
                   </Link>)}
                   </button>
