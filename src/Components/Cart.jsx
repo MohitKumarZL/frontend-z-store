@@ -1,76 +1,14 @@
-// import React from 'react'
-// import { Link } from "react-router-dom";
-// import order from "../assets/order.png"
-// import { AiOutlineClose } from "react-icons/ai";
-
-
-
-// const Cart = () => {
-
-//   const Orders = [
-//     {
-//       "id": 1,
-//       "price": 160.00,
-//       "quantity": 1,
-//       "title": "Wrap Top",
-//       "color": "White",
-//       "size": "S",
-//       "image": order,
-//     },
-//     {
-//       "id": 2,
-//       "price": 195.00,
-//       "quantity": 1,
-//       "title": "Casual Wild Leg",
-//       "color": "Dark Blue",
-//       "size": "S",
-//       "image": order,
-//     },
-//   ]
-
-//   return (
-//     <div className='max-w-5x1 px-25 py-10'>
-//       <div className='flex justify-between '><div className='text-sm text-[#748C70] flex items-center'>Back <span className='pl-15 text-3xl font-semibold text-black'>Your Cart</span></div>
-//         <div className='text-sm text-[#748C70] flex items-center'>Continue Shopping</div></div>
-//       <div>
-//         {/* cart header */}
-//         <div className='flex  py-7 border-b border-gray-200'>
-//           <div className='w-1/2'>Order Summary</div>
-//           <div className='w-1/2 flex justify-around'>
-//             <div>Price</div><div>Quantity</div><div>Total</div>
-//           </div>
-//         </div>
-//         {/* cart items */}
-
-//         {Orders.map((item) => (
-//           <div className='flex  pt-7'   key={item.id}>
-//             <div className='w-1/2'>
-//             <div className=' grid grid-cols-4' ><div><img src={item.image} width={120} height={170}/> </div>
-//               <div className='space-y-5 my-3 ' ><div className='flex justify-between'><div>{item.title}</div>
-//                 <div><AiOutlineClose /></div></div>
-//                 <div>{item.size}</div>
-//                 <div>{item.color}</div></div></div>
-//                 </div>
-//             <div className='w-1/2 flex justify-around'>
-//               <div>{item.price}</div><div>{item.quantity}</div><div>Total</div>
-//             </div>
-//           </div>
-//         ))}
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Cart
-
 
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import order from "../assets/order.png";
 import { AiOutlineClose } from "react-icons/ai";
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart } from '../store/cartSlice';
 
 const Cart = () => {
+    const cartItems = useSelector(state => state.cart.items);
+  const dispatch = useDispatch();
   // State to manage quantity for each item
   const [orders, setOrders] = useState([
     {
@@ -102,23 +40,10 @@ const Cart = () => {
     },
   ]);
 
-  // Functions to handle quantity changes
-  const increaseQuantity = (id) => {
-    setOrders(orders.map(item => 
-      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-    ));
-  };
-
-  const decreaseQuantity = (id) => {
-    setOrders(orders.map(item => 
-      item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
-    ));
-  };
-
-  // Remove item from cart
-  const removeItem = (id) => {
-    setOrders(orders.filter(item => item.id !== id));
-  };
+  // use redux functions
+const increaseQuantity = (id) => dispatch(increaseQty(id));
+const decreaseQuantity = (id) => dispatch(decreaseQty(id));
+const removeItem = (id) => dispatch(removeFromCart(id));
 
   // Calculate totals
   const subtotal = orders.reduce((acc, item) => acc + item.price * item.quantity, 0);

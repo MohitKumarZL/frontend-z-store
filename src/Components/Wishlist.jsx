@@ -7,7 +7,7 @@ const Wishlist = () => {
 
   return (
     <div>
-        <h1> My Wish List</h1>
+        <h1> My Wish List add to the app</h1>
       <Footer/>
     </div>
   )
