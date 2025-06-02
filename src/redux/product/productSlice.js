@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-  const res = await fetch('/api/products'); // Replace with real API
+  const res = await fetch('https://dummyjson.com/products'); // Replace with real API
   return res.json();
 });
 
