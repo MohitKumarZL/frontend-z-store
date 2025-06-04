@@ -31,7 +31,7 @@
 //     autoplaySpeed: 2000,
 //     slidesToShow: 2,
 //     slidesToScroll: 1,
-    
+
 //   };
 
 
@@ -187,9 +187,8 @@ const BestSellers = () => {
                 />
                 <FaHeart
                   onClick={() => handleFavoriteClick(item.id)}
-                  className={`absolute sm:right-6 sm:top-6 right-3 top-3 text-base sm:text-2xl border border-black bg-black p-1 rounded-full ${
-                    favorite[item.id] ? "text-red-500" : "text-white"
-                  } cursor-pointer`}
+                  className={`absolute sm:right-6 sm:top-6 right-3 top-3 text-base sm:text-2xl border border-black bg-black p-1 rounded-full ${favorite[item.id] ? "text-red-500" : "text-white"
+                    } cursor-pointer`}
                 />
               </div>
               <div className="mt-3">
@@ -219,9 +218,8 @@ const BestSellers = () => {
               <img src={item.image} alt={`item ${item.id}`} className="h-48 w-full object-cover rounded-lg" />
               <FaHeart
                 onClick={() => handleFavoriteClick(item.id)}
-                className={`absolute sm:right-12 sm:top-6 text-xl right-4 top-4 border border-black bg-black p-1 rounded-full ${
-                  favorite[item.id] ? "text-red-500" : "text-white"
-                } cursor-pointer`}
+                className={`absolute sm:right-12 sm:top-6 text-xl right-4 top-4 border border-black bg-black p-1 rounded-full ${favorite[item.id] ? "text-red-500" : "text-white"
+                  } cursor-pointer`}
               />
               <div className="mt-3">
                 <h2 className="text-base sm:text-lg font-semibold">{item.name}</h2>

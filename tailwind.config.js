@@ -19,6 +19,15 @@ export default {
           sm: "2rem",
         },
       },
+      screens: {
+        'xs': '480px',        // extra small
+        'sm': '640px',        // small (default)
+        'md': '768px',        // medium (default)
+        'lg': '1024px',       // large (default)
+        'xl': '1280px',       // extra large (default)
+        '2xl': '1536px',      // 2x extra large (default)
+        'tv': '1800px',       // your custom breakpoint
+      },
     },
   },
   plugins: [],

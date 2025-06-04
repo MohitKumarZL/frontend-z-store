@@ -10,7 +10,7 @@ import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="w-full relative">
@@ -31,7 +31,7 @@ const Navbar = () => {
               <li className="relative hover:bg-[#748C70] hover:text-white rounded-xl">
                 <Link
                   to="/collection"
-                  className="block px-[0.5vw] py-[1.111vw]"
+                  className="block px-[0.5vw] py-[1.111vw] "
                 >
                   Collection
                 </Link>
@@ -86,14 +86,14 @@ const Navbar = () => {
               </li>
               <li>
                 <button
-                onCanPlay={()=> setIsLoggedIn(!isLoggedIn)}>
-                {isLoggedIn ? (
-                  <AiOutlineClose className="min-w-[1.667vw] h-auto" />
-                ) : (
-                  <Link to="/signin" className="block px-[0.5vw] py-[1.111vw]">
-                    <FaRegUser className="min-w-[1.667vw] h-auto" />
-                  </Link>)}
-                  </button>
+                  onCanPlay={() => setIsLoggedIn(!isLoggedIn)}>
+                  {isLoggedIn ? (
+                    <AiOutlineClose className="min-w-[1.667vw] h-auto" />
+                  ) : (
+                    <Link to="/signin" className="block px-[0.5vw] py-[1.111vw]">
+                      <FaRegUser className="min-w-[1.667vw] h-auto" />
+                    </Link>)}
+                </button>
               </li>
               <li>
                 <Link to="/wishlist" className="block px-[0.5vw] py-[1.111vw]">
