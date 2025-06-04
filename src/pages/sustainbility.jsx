@@ -1,9 +1,9 @@
 import React from "react";
 import heroImage from "../assets/Sustainbility/sustainHero.jpg";
 import Footer from "../Components/Footer";
-import Pic1 from "../assets/Sustainbility/pic1.jpg"
-import Pic2 from "../assets/Sustainbility/pic2.jpg"
-import Pic3 from "../assets/Sustainbility/pic3.jpg"
+import pic1 from "../assets/Sustainbility/pic1.jpg"
+import pic2 from "../assets/Sustainbility/pic2.jpg"
+import pic3 from "../assets/Sustainbility/pic3.jpg"
 import p4 from "../assets/Sustainbility/p4.jpg"
 import p5 from "../assets/Sustainbility/p5.jpg"
 import p6 from "../assets/Sustainbility/p6.jpg"
@@ -90,12 +90,12 @@ const Sustainability = () => {
           </div>
           {/* Gallary */}
           <div className="flex gap-2  sm:gap-4  pt-12">
-            <div className="w-1/2 flex flex-col justify-center"><img src={Pic3} className="h-[80vw] sm:h-[38.071vw]" /> <button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Processing</button></div>
-            <div className="w-1/2"><img src={Pic2} className="h-[80vw] sm:h-[60.857vw] " /><button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Materials</button></div>
+            <div className="w-1/2 flex flex-col justify-center"><img src={pic3} className="h-[80vw] sm:h-[38.071vw]" /> <button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Processing</button></div>
+            <div className="w-1/2"><img src={pic2} className="h-[80vw] sm:h-[60.857vw] " /><button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Materials</button></div>
           </div>
           <div className="flex gap-2 sm:gap-4 pt-2 sm:pt-0 pb-12  ">
-            <div className="w-1/2"><img src={Pic1} className="h-[80vw] sm:h-[60.857vw] w-full " /> <button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Packing</button></div>
-            <div className="w-1/2 flex flex-col justify-center "><img src={Pic3} className="h-[80vw] sm:h-[38.071vw]" /><button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4  w-full mt-2 flex justify-center">Product Caring</button></div>
+            <div className="w-1/2"><img src={pic1} className="h-[80vw] sm:h-[60.857vw] w-full " /> <button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4 w-full mt-2 flex justify-center">Packing</button></div>
+            <div className="w-1/2 flex flex-col justify-center "><img src={pic3} className="h-[80vw] sm:h-[38.071vw]" /><button className=" bg-[#5A6D57] text-white text-sm py-2 sm:py-4  w-full mt-2 flex justify-center">Product Caring</button></div>
           </div>
 
           <div className=" text-sm text-gray-700">

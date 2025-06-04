@@ -20,23 +20,14 @@ const NewinDropdown = () => {
         </div>
 
         <div className="space-x-5 space-y-6">
-          <h1 className="text-lg">Featured</h1>
+          <h1 className="text-lg">Trending</h1>
           <div className="space-y-4 text-[#404040] text-lg">
-            <div>New In</div>
-            <div>ZhopFest</div>
             <div>Plus Size</div>
-            <div>Best Seller</div>
+            <div>Fall Collection</div>
+            <div>ZhopFest</div>
           </div>
         </div>
-        <div className="space-x-5 space-y-6">
-          <h1 className="text-lg">More</h1>
-          <div className="space-y-4 text-[#404040] text-lg">
-            <div>Bundles</div>
-            <div>Ocassion Wear</div>
-            <div>Matching Set</div>
-            <div>Suiting</div>
-          </div>
-        </div>
+
       </div>
       <div className="flex space-x-6">
         <div className="space-y-3">

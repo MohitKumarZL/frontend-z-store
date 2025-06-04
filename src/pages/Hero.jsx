@@ -15,7 +15,7 @@ const Hero = () => {
     <div className="w-full h-full sm:overflow-hidden ">
       <div className="relative">
         <img src={hero} className="w-full sm:-mt-25 object-cover" alt="Hero" />
-        <div className="absolute inset-0 flex flex-col justify-center mt-20 sm:ml-20 items-start px-4 sm:px-8 " >
+        <div className="absolute inset-0 flex flex-col justify-center mt-20 sm:ml-10 items-start px-4 sm:px-8 " >
           <span className="text-sm  sm:text-6xl font-light mb-4 sm:leading-20">
             <Typewriter
               options={{

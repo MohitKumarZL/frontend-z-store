@@ -9,34 +9,17 @@ const PlusSizeDropdown = () => {
           <h1 className="text-lg  ">Category</h1>
           <div className="space-y-4 text-[#404040] text-lg">
             <div>Shop All</div>
-            <div>Blouses & Top</div>
-            <div>Pants</div>
-            <div>Dress & Jumpsuits</div>
-            <div >Outwear & Jackets</div>
-            <div>Pullovers</div>
+            <div>Top & Blouses </div>
             <div>Tees</div>
+            <div>Pants</div>
+            <div> Jackets & Outwear </div>
+            <div>Pullovers</div>
+            <div>Dress & Jumpsuits</div>
             <div>Shots & Skirts</div>
           </div>
         </div>
 
-        <div className="space-x-5 space-y-6">
-          <h1 className="text-lg">Featured</h1>
-          <div className="space-y-4 text-[#404040] text-lg">
-            <div>New In</div>
-            <div>ZhopFest</div>
-            <div>Plus Size</div>
-            <div>Best Seller</div>
-          </div>
-        </div>
-        <div className="space-x-5 space-y-6">
-          <h1 className="text-lg">More</h1>
-          <div className="space-y-4 text-[#404040] text-lg">
-            <div>Bundles</div>
-            <div>Ocassion Wear</div>
-            <div>Matching Set</div>
-            <div>Suiting</div>
-          </div>
-        </div>
+
       </div>
       <div className="flex space-x-6">
         <div className="space-y-3">
