@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
@@ -15,9 +15,10 @@ import Menu from "./Menu";
 import Signin from "./Signin";
 import Wishlist from "./Wishlist";
 import Cart from "./Cart";
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -26,7 +27,7 @@ const navigate = useNavigate();
     setActiveDropdown(menu);
   };
 
-  
+
   const handleMouseLeave = () => {
     setActiveDropdown(null);
   };
@@ -79,7 +80,7 @@ const navigate = useNavigate();
                   New In
                 </button>
               </li>
-              <li className="px-[0.5vw] relative  py-[1.111vw]">ZhopFest</li>
+              <li className="px-[0.5vw] relative  py-[1.111vw]"><Link to="/zhopfest">ZhopFest</Link></li>
               <li className=" relative hover:bg-[#748C70] hover:text-white rounded-xl ">
                 <button
                   className="px-[0.5vw]  py-[1.111vw] "
@@ -103,24 +104,25 @@ const navigate = useNavigate();
           <div>
             <ul className="flex space-x-[1.667vw]">
               <li>
-                <button onClick={()=>togglePanel("search")} >
-                  {isOpen ? <AiOutlineClose className="min-w-[1.667vw] h-auto"/> : <IoSearch className="min-w-[1.667vw] h-auto" />}
+                <button onClick={() => togglePanel("search")} >
+                  {isOpen ? <AiOutlineClose className="min-w-[1.667vw] h-auto" /> : <IoSearch className="min-w-[1.667vw] h-auto" />}
                 </button>
               </li>
-              <li>  
+              <li>
                 <button onClick={() => handleClick("/signin")}>
                   <FaRegUser className="min-w-[1.667vw] h-auto" />
                 </button>
               </li>
               <li>
-                <button onClick={ () => handleClick("/wishlist")}>
+                <button onClick={() => handleClick("/wishlist")}>
                   <BsHeart className="min-w-[1.667vw] h-auto" />
                 </button>
               </li>
               <li>
-                <button  onClick={() => handleClick("/cart")}>
+                <button onClick={() => handleClick("/cart")}>
                   <LiaShoppingBagSolid className="min-w-[1.667vw] h-auto" />
                 </button>
+                <div className="bg-red-500 text-white text-[0.8vw] absolute px-1 rounded-4xl right-25 top-12   ">3</div>
               </li>
             </ul>
           </div>
@@ -136,20 +138,20 @@ const navigate = useNavigate();
                 <button
                   onClick={() => togglePanel("menu")}
                 >
-                  {isOpen === "menu" ? <AiOutlineClose className="min-w-[24px] h-auto"/> : 
+                  {isOpen === "menu" ? <AiOutlineClose className="min-w-[24px] h-auto" /> :
                     <FaBars className="min-w-[24px] h-auto" />}
                 </button>
               </li>
               <li className="px-[0.5vw] flex items-center">
                 <button onClick={() => togglePanel("search")}>
-                  {isOpen === "search" ? <AiOutlineClose className="min-w-[24px] h-auto"/> : 
+                  {isOpen === "search" ? <AiOutlineClose className="min-w-[24px] h-auto" /> :
                     <IoSearch className="min-w-[24px] h-auto" />}
                 </button>
               </li>
             </ul>
           </div>
           <div className="flex justify-center items-center">
-            <h1 className="font-bold text-[8.889vw] text-[#404040]" onClick={()=>handleClick("/")}>Z-Store</h1>
+            <h1 className="font-bold text-[8.889vw] text-[#404040]" onClick={() => handleClick("/")}>Z-Store</h1>
           </div>
           <div>
             <ul className="flex space-x-[2.222vw] ">
@@ -170,34 +172,34 @@ const navigate = useNavigate();
 
       {/* Dropdown covering Hero Section (Desktop and Mobile) */}
       {activeDropdown === "collection" && (
-        <div onMouseEnter={() => handleMouseEnter("collection")} onMouseLeave={handleMouseLeave} className="absolute top-25 left-0 w-full  z-50" 
->
+        <div onMouseEnter={() => handleMouseEnter("collection")} onMouseLeave={handleMouseLeave} className="absolute top-25 left-0 w-full  z-50"
+        >
           <CollectionDropdown />
         </div>
       )}
 
       {activeDropdown === "newin" && (
-        <div onMouseEnter={() => handleMouseEnter("newin")} onMouseLeave={handleMouseLeave}  className="absolute top-25 left-0 w-full z-50">
+        <div onMouseEnter={() => handleMouseEnter("newin")} onMouseLeave={handleMouseLeave} className="absolute top-25 left-0 w-full z-50">
           <NewinDropdown />
         </div>
       )}
       {activeDropdown === "plusSize" && (
-        <div onMouseEnter={() => handleMouseEnter("plusSize")} onMouseLeave={handleMouseLeave}  className="absolute top-25 left-0 w-full z-50">
+        <div onMouseEnter={() => handleMouseEnter("plusSize")} onMouseLeave={handleMouseLeave} className="absolute top-25 left-0 w-full z-50">
           <PlusSizeDropdown />
         </div>
       )}
 
       {activeDropdown === "sustainability" && (
-        <div onMouseEnter={() => handleMouseEnter("sustainability")} onMouseLeave={handleMouseLeave}  className="absolute top-25 left-0 w-full z-50">
+        <div onMouseEnter={() => handleMouseEnter("sustainability")} onMouseLeave={handleMouseLeave} className="absolute top-25 left-0 w-full z-50">
           <SustainbilityDropdown />
         </div>
       )}
 
-{isOpen === "search" && <SearchBar />}
-{/* {isOpen === "login" && <Login />}
+      {isOpen === "search" && <SearchBar />}
+      {/* {isOpen === "login" && <Login />}
 {isOpen === "wishlist" && <Wishlist />}
 {isOpen === "cart" && <Cart />}  */}
-{isOpen === "menu" && <Menu/>}
+      {isOpen === "menu" && <Menu />}
 
     </div>
   );

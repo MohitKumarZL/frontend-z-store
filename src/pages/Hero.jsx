@@ -32,7 +32,8 @@ const Hero = () => {
                 loop: true,
                 delay: 50,
               }}
-            />          </span>
+            />
+          </span>
           <button className="px-7 sm:px-15 py-1 sm:py-2 bg-black text-white hover:bg-red-500 hover:text-black  text-xs sm:text-2xl">
             NewIn
           </button>

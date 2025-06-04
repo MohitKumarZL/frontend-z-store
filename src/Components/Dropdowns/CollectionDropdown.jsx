@@ -11,7 +11,7 @@ const CollectionDropdown = () => {
 
   }
   return (
-    <div className=" bg-white w-full z-20 flex justify-between mt-2 2xl:mt-13 px-[7.5vw] pt-[2.222vw] pb-[1.558vw] space-x-[3.75vw] w-full border-t border-gray-300">
+    <div className=" bg-white w-full z-20 flex justify-between mt-2 lg:mt-10 2xl:mt-13 px-[7.5vw] pt-[2.222vw] pb-[1.558vw] space-x-[3.75vw] w-full border-t border-gray-300">
 
       <div className="grid grid-cols-3 w-1/2 ">
         <div className="space-x-5 space-y-6">
