@@ -38,6 +38,7 @@ const Navbar = () => {
 
   };
 
+
   useEffect(() => {
     console.log("isOpen updated to:", isOpen);
   }, [isOpen]);
@@ -80,7 +81,7 @@ const Navbar = () => {
                   New In
                 </button>
               </li>
-              <li className="px-[0.5vw] relative  py-[1.111vw]"><Link to="/zhopfest">ZhopFest</Link></li>
+              <li className="px-[0.5vw] relative  hover:outline-2 outline-[#748C70] outline-offset-[-2px] rounded-xl py-[1.111vw]"><Link to="/zhopfest">ZhopFest</Link></li>
               <li className=" relative hover:bg-[#748C70] hover:text-white rounded-xl ">
                 <button
                   className="px-[0.5vw]  py-[1.111vw] "
@@ -105,7 +106,7 @@ const Navbar = () => {
             <ul className="flex space-x-[1.667vw]">
               <li>
                 <button onClick={() => togglePanel("search")} >
-                  {isOpen ? <AiOutlineClose className="min-w-[1.667vw] h-auto" /> : <IoSearch className="min-w-[1.667vw] h-auto" />}
+                  <IoSearch className="min-w-[1.667vw] h-auto" />
                 </button>
               </li>
               <li>
@@ -144,8 +145,7 @@ const Navbar = () => {
               </li>
               <li className="px-[0.5vw] flex items-center">
                 <button onClick={() => togglePanel("search")}>
-                  {isOpen === "search" ? <AiOutlineClose className="min-w-[24px] h-auto" /> :
-                    <IoSearch className="min-w-[24px] h-auto" />}
+                  <IoSearch className="min-w-[24px] h-auto" />
                 </button>
               </li>
             </ul>
